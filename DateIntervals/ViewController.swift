@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  DateIntervals
 //
-//  Created by ZhengFamily on 30/05/2017.
 //  Copyright © 2017 UnnamedGreenCompany. All rights reserved.
 //
 
