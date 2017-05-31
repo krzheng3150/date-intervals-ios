@@ -14,7 +14,7 @@ class SuperUIDatePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDat
     var MAX_YEAR = 2037
     
     var years: [Int]!
-    var months: [String]!
+    var months: [Int]!
     var days: [Int]!
     var hours: [Int]!
     var minutes: [Int]!
@@ -68,12 +68,9 @@ class SuperUIDatePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDat
         }
         self.years = years
         
-        // populate months with localized names
-        var months: [String] = []
-        var month = 0
-        for _ in 1...12 {
-            months.append(DateFormatter().monthSymbols[month].capitalized)
-            month += 1
+        var months: [Int] = []
+        for month in 1...12 {
+            months.append(month)
         }
         self.months = months
         
@@ -113,7 +110,7 @@ class SuperUIDatePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDat
         case 0:
             return "\(years[row])"
         case 1:
-            return months[row]
+            return "\(months[row])"
         case 2:
             return "\(days[row])"
         case 3:
