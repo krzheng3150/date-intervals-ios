@@ -507,6 +507,7 @@
 				6C9650521EDDE2B50001D320 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C9650531EDDE2B50001D320 /* Build configuration list for PBXNativeTarget "DateIntervalsTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +516,7 @@
 				6C9650551EDDE2B50001D320 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C9650561EDDE2B50001D320 /* Build configuration list for PBXNativeTarget "DateIntervalsUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +525,7 @@
 				6C9650581EDDE2B50001D320 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
