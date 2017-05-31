@@ -35,46 +35,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vR8-RG-UYQ">
-                                <rect key="frame" x="0.0" y="163" width="84" height="149"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IpU-Fr-4B8">
-                                <rect key="frame" x="83" y="163" width="81" height="149"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIi-j4-cbi">
-                                <rect key="frame" x="163" y="163" width="72" height="149"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVH-Ko-6lo">
-                                <rect key="frame" x="234" y="163" width="72" height="149"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arh-dH-51Q">
-                                <rect key="frame" x="303" y="163" width="72" height="149"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8r-Zw-cMg">
-                                <rect key="frame" x="0.0" y="365" width="84" height="149"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xvx-ax-aH0">
-                                <rect key="frame" x="83" y="365" width="81" height="149"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-xp-3YF">
-                                <rect key="frame" x="163" y="365" width="72" height="149"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Urg-0a-txD">
-                                <rect key="frame" x="233" y="365" width="72" height="149"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7bI-z6-rWO">
-                                <rect key="frame" x="303" y="365" width="72" height="149"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Intervals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUX-2h-DlZ">
                                 <rect key="frame" x="6" y="55" width="151" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -89,26 +49,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFR-0x-gFG" customClass="SuperUIDatePickerView" customModule="DateIntervals" customModuleProvider="target">
+                                <rect key="frame" x="6" y="163" width="353" height="165"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3R0-af-yVN" customClass="SuperUIDatePickerView" customModule="DateIntervals" customModuleProvider="target">
+                                <rect key="frame" x="6" y="365" width="353" height="165"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="endDayField" destination="Jim-xp-3YF" id="lb5-Dj-DqU"/>
-                        <outlet property="endHourField" destination="Urg-0a-txD" id="O7c-hM-dwX"/>
-                        <outlet property="endMinuteField" destination="7bI-z6-rWO" id="Qgy-9Z-sly"/>
-                        <outlet property="endMonthField" destination="xvx-ax-aH0" id="Xt6-rV-QUb"/>
-                        <outlet property="endYearField" destination="b8r-Zw-cMg" id="Px9-0y-C9A"/>
+                        <outlet property="endDateField" destination="3R0-af-yVN" id="JoE-KY-gvB"/>
                         <outlet property="numIntervalsField" destination="NdE-aS-8ve" id="Zo5-yX-IQS"/>
-                        <outlet property="startDayField" destination="fIi-j4-cbi" id="wU7-06-Xg9"/>
-                        <outlet property="startHourField" destination="fVH-Ko-6lo" id="gXy-2d-SLY"/>
-                        <outlet property="startMinuteField" destination="arh-dH-51Q" id="FBq-4L-fT1"/>
-                        <outlet property="startMonthField" destination="IpU-Fr-4B8" id="rwh-OD-pAF"/>
-                        <outlet property="startYearField" destination="vR8-RG-UYQ" id="yIx-sf-PnW"/>
+                        <outlet property="startDateField" destination="sFR-0x-gFG" id="cDk-mz-qM2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="330" y="32"/>
+            <point key="canvasLocation" x="328.80000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
