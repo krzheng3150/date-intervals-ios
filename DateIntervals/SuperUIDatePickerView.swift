@@ -10,8 +10,8 @@ import UIKit
 
 class SuperUIDatePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var MIN_YEAR = 1970
-    var MAX_YEAR = 2037
+    let MIN_YEAR = 1970
+    let MAX_YEAR = 2037
     
     var years: [Int]!
     var months: [Int]!

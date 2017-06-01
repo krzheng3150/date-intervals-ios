@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--mainScene-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DateIntervals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" title="mainScene" id="BYZ-38-t0r" customClass="ViewController" customModule="DateIntervals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,13 +42,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NdE-aS-8ve">
-                                <rect key="frame" x="6" y="84" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFR-0x-gFG" customClass="SuperUIDatePickerView" customModule="DateIntervals" customModuleProvider="target">
                                 <rect key="frame" x="6" y="163" width="353" height="165"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -57,6 +50,20 @@
                                 <rect key="frame" x="6" y="365" width="353" height="165"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWs-ah-BcH">
+                                <rect key="frame" x="143" y="562" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calculate!"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5k-2a-W6b"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number from 2-9000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NdE-aS-8ve">
+                                <rect key="frame" x="6" y="84" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -64,11 +71,30 @@
                         <outlet property="endDateField" destination="3R0-af-yVN" id="JoE-KY-gvB"/>
                         <outlet property="numIntervalsField" destination="NdE-aS-8ve" id="Zo5-yX-IQS"/>
                         <outlet property="startDateField" destination="sFR-0x-gFG" id="cDk-mz-qM2"/>
+                        <outlet property="submitButton" destination="NWs-ah-BcH" id="gRf-xP-UZD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="328.80000000000001" y="31.934032983508249"/>
+            <point key="canvasLocation" x="-71.200000000000003" y="31.934032983508249"/>
+        </scene>
+        <!--resultsScene-->
+        <scene sceneID="Qlq-Pf-KiX">
+            <objects>
+                <viewController storyboardIdentifier="results" title="resultsScene" id="PPR-Cu-Y85" customClass="ResultsViewController" customModule="DateIntervals" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ACN-6J-fLD"/>
+                        <viewControllerLayoutGuide type="bottom" id="9RF-xC-MuT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qab-80-Odv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="foz-qv-SVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="32"/>
         </scene>
     </scenes>
 </document>
