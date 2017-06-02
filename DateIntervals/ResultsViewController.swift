@@ -44,7 +44,8 @@ class ResultsViewController: UIViewController {
             alert(title: "Results Too Big", message: "Unfortunately, because there are more than 100 intervals, they will not be displayed. Please download or email them.")
         }
         else {
-            
+            let tableController: TableViewController = self.storyboard?.instantiateViewController(withIdentifier: "table") as! TableViewController
+            self.present(tableController, animated: true, completion: nil)
         }
     }
     

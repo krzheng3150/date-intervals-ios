@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C1A37111EE0667100964DB9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A37101EE0667100964DB9 /* ResultsViewController.swift */; };
+		6C1A37151EE1CD6600964DB9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1A37141EE1CD6600964DB9 /* TableViewController.swift */; };
 		6C20B5C01EDEF357000A089D /* SuperUIDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C20B5BF1EDEF357000A089D /* SuperUIDatePickerView.swift */; };
 		6C20B5C11EDF003F000A089D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C96502D1EDDE2B40001D320 /* ViewController.swift */; };
 		6C96502C1EDDE2B40001D320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C96502B1EDDE2B40001D320 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		6C1A37101EE0667100964DB9 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		6C1A37141EE1CD6600964DB9 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		6C20B5BF1EDEF357000A089D /* SuperUIDatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperUIDatePickerView.swift; sourceTree = "<group>"; };
 		6C9650281EDDE2B40001D320 /* DateIntervals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateIntervals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C96502B1EDDE2B40001D320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				6C96502D1EDDE2B40001D320 /* ViewController.swift */,
 				6C1A37101EE0667100964DB9 /* ResultsViewController.swift */,
 				6C20B5BF1EDEF357000A089D /* SuperUIDatePickerView.swift */,
+				6C1A37141EE1CD6600964DB9 /* TableViewController.swift */,
 				6C96502F1EDDE2B40001D320 /* Main.storyboard */,
 				6C9650321EDDE2B40001D320 /* Assets.xcassets */,
 				6C9650341EDDE2B40001D320 /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 				6C96502E1EDDE2B40001D320 /* ViewController.swift in Sources */,
 				6C20B5C01EDEF357000A089D /* SuperUIDatePickerView.swift in Sources */,
 				6C96502C1EDDE2B40001D320 /* AppDelegate.swift in Sources */,
+				6C1A37151EE1CD6600964DB9 /* TableViewController.swift in Sources */,
 				6C1A37111EE0667100964DB9 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
