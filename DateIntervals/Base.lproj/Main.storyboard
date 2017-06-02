@@ -52,7 +52,7 @@
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWs-ah-BcH">
                                 <rect key="frame" x="125" y="580" width="125" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate!"/>
                                 <connections>
                                     <action selector="onSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5k-2a-W6b"/>
@@ -105,18 +105,30 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4w-kF-Gb4">
                                 <rect key="frame" x="124" y="487" width="127" height="30"/>
                                 <state key="normal" title="Send Email"/>
+                                <connections>
+                                    <action selector="onSendEmail:" destination="PPR-Cu-Y85" eventType="touchUpInside" id="xwB-FQ-373"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJA-jP-DuB">
                                 <rect key="frame" x="124" y="587" width="127" height="30"/>
                                 <state key="normal" title="Go Back"/>
+                                <connections>
+                                    <action selector="onBackClick:" destination="PPR-Cu-Y85" eventType="touchUpInside" id="bi5-ot-2U2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaD-Ba-g70">
                                 <rect key="frame" x="124" y="387" width="127" height="30"/>
                                 <state key="normal" title="Download File"/>
+                                <connections>
+                                    <action selector="onDownload:" destination="PPR-Cu-Y85" eventType="touchUpInside" id="vwZ-Wk-Q60"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JW-T0-ky1">
                                 <rect key="frame" x="124" y="287" width="127" height="30"/>
                                 <state key="normal" title="View Results"/>
+                                <connections>
+                                    <action selector="onViewResults:" destination="PPR-Cu-Y85" eventType="touchUpInside" id="shs-F3-lko"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
