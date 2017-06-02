@@ -139,6 +139,24 @@ class SuperUIDatePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDat
         }
     }
     
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat
+    {
+        switch component {
+        case 0:
+            return CGFloat(self.bounds.width * 0.32)
+        case 1:
+            return CGFloat(self.bounds.width * 0.17)
+        case 2:
+            return CGFloat(self.bounds.width * 0.17)
+        case 3:
+            return CGFloat(self.bounds.width * 0.17)
+        case 4:
+            return CGFloat(self.bounds.width * 0.17)
+        default:
+            return 0
+        }
+    }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let year = years[self.selectedRow(inComponent: 0)]
         let month = self.selectedRow(inComponent: 1)+1
