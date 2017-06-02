@@ -2,7 +2,6 @@
 //  ResultsViewController.swift
 //  DateIntervals
 //
-//  Created by ZhengFamily on 01/06/2017.
 //  Copyright © 2017 UnnamedGreenCompany. All rights reserved.
 //
 
@@ -45,6 +44,7 @@ class ResultsViewController: UIViewController {
         }
         else {
             let tableController: TableViewController = self.storyboard?.instantiateViewController(withIdentifier: "table") as! TableViewController
+            tableController.results = results
             self.present(tableController, animated: true, completion: nil)
         }
     }

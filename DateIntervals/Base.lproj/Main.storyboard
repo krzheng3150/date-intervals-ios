@@ -173,24 +173,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZf-Cf-3zB">
-                                <rect key="frame" x="124" y="587" width="127" height="30"/>
+                                <rect key="frame" x="124" y="617" width="127" height="30"/>
                                 <state key="normal" title="Go Back"/>
                                 <connections>
                                     <action selector="onBackClick:" destination="XHQ-bs-p6z" eventType="touchUpInside" id="FTe-QP-nwP"/>
                                     <segue destination="PPR-Cu-Y85" kind="show" id="wrk-Yy-h1s"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SPg-om-cLG">
+                                <rect key="frame" x="16" y="28" width="343" height="556"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="wR1-W7-LED">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wR1-W7-LED" id="PHz-rp-Sfi">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ps3-Hl-SI5" firstAttribute="top" secondItem="FZf-Cf-3zB" secondAttribute="bottom" constant="50" id="FGQ-gx-3L2"/>
+                            <constraint firstItem="Ps3-Hl-SI5" firstAttribute="top" secondItem="FZf-Cf-3zB" secondAttribute="bottom" constant="20" id="FGQ-gx-3L2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FZf-Cf-3zB" secondAttribute="trailing" constant="108" id="Wcz-3L-3wm"/>
                             <constraint firstItem="FZf-Cf-3zB" firstAttribute="leading" secondItem="Rzo-vn-KUG" secondAttribute="leadingMargin" constant="108" id="okK-MO-ctm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="SPg-om-cLG" id="Nvq-mI-5vB"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1402" y="32"/>
+            <point key="canvasLocation" x="1400.8" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
