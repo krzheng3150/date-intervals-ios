@@ -16,10 +16,14 @@ class ResultsViewController: UIViewController {
     var numIntervals: Int = 10
     var startDate: Date = Date()
     var endDate: Date = Date()
-    var results: [Date] = []
+    var results: [String] = []
+    
+    var fileTitleDateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fileTitleDateFormatter.dateFormat = "yyyyMMddHHmmss"
         
         statusLabel.textAlignment = NSTextAlignment.center;
         statusLabel.font = statusLabel.font.withSize(48)
@@ -27,11 +31,12 @@ class ResultsViewController: UIViewController {
         
         let startTime = startDate.timeIntervalSince1970
         let endTime = endDate.timeIntervalSince1970
-        results.append(startDate)
+        results.append(dateToDisplayString(date: startDate))
         for i in 1...numIntervals-1 {
-            results.append(Date(timeIntervalSince1970: startTime + ((endTime - startTime) / Double(numIntervals)) * Double(i)))
+            let d = Date(timeIntervalSince1970: startTime + ((endTime - startTime) / Double(numIntervals)) * Double(i))
+            results.append(dateToDisplayString(date: d))
         }
-        results.append(endDate)
+        results.append(dateToDisplayString(date: endDate))
         
         statusLabel.text = "Status: Done!"
         
@@ -49,21 +54,15 @@ class ResultsViewController: UIViewController {
     }
     
     @IBAction func onDownload(_ sender: UIButton) {
-        //Proof of concept. TODO the real thing
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        
-        let filename = "output.txt"
-        
-        // Set the data we want to write
-        let contents = "Lorem ipsum dolor sit amet"
-            
-        // Write it to the file
+        let filename = generateFileName()
+        let contents = generateCsvString()
         do {
             try contents.write(toFile: path + filename, atomically: true, encoding: .utf8)
             alert(title: "Download Success", message: "Successfully downloaded to your Documents folder as " + filename)
         }
         catch {
-            alert(title: "LUL", message: "\(error)")
+            alert(title: "Download Failed", message: "\(error)")
         }
     }
     
@@ -72,6 +71,24 @@ class ResultsViewController: UIViewController {
     
     @IBAction func onBackClick(_ sender: UIButton) {
         self.dismiss(animated: true, completion: {});
+    }
+    
+    func generateFileName() -> String {
+        return "DateIntervals-" + fileTitleDateFormatter.string(from: Date()) + ".csv"
+    }
+    
+    func generateCsvString() -> String {
+        var fileStr = ""
+        for i in 0...results.count-1 {
+            fileStr.append(String(i+1) + "," + results[i] + "\n")
+        }
+        return fileStr
+    }
+    
+    func dateToDisplayString(date: Date) -> String {
+        let dateStr = date.description
+        //We want to omit the time zone portion by taking the string up until the " +0000" part
+        return dateStr.substring(to: dateStr.index(dateStr.endIndex, offsetBy: -6))
     }
     
     func alert(title: String, message: String) {

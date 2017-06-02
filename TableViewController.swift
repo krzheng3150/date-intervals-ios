@@ -12,7 +12,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var tableView: UITableView!
     
-    var results: [Date] = []
+    var results: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if tableView == self.tableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
             let row = indexPath.row
-            cell.textLabel?.text = results[row].description
+            cell.textLabel?.text = String(row+1) + ": " + results[row]
             return cell
         }
         
