@@ -49,6 +49,22 @@ class ResultsViewController: UIViewController {
     }
     
     @IBAction func onDownload(_ sender: UIButton) {
+        //Proof of concept. TODO the real thing
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        
+        let filename = "output.txt"
+        
+        // Set the data we want to write
+        let contents = "Lorem ipsum dolor sit amet"
+            
+        // Write it to the file
+        do {
+            try contents.write(toFile: path + filename, atomically: true, encoding: .utf8)
+            alert(title: "Download Success", message: "Successfully downloaded to your Documents folder as " + filename)
+        }
+        catch {
+            alert(title: "LUL", message: "\(error)")
+        }
     }
     
     @IBAction func onSendEmail(_ sender: UIButton) {
