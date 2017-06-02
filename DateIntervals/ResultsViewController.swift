@@ -55,6 +55,7 @@ class ResultsViewController: UIViewController {
     }
     
     @IBAction func onBackClick(_ sender: UIButton) {
+        //This method needs to be here even if empty, but it has been set to go back to main screen via controller
     }
     
     func alert(title: String, message: String) {

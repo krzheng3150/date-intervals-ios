@@ -113,7 +113,8 @@
                                 <rect key="frame" x="124" y="587" width="127" height="30"/>
                                 <state key="normal" title="Go Back"/>
                                 <connections>
-                                    <action selector="onBackClick:" destination="PPR-Cu-Y85" eventType="touchUpInside" id="bi5-ot-2U2"/>
+                                    <action selector="onBackClick:" destination="PPR-Cu-Y85" eventType="touchUpInside" id="hZD-NV-ydp"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Esm-ql-vcJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaD-Ba-g70">
