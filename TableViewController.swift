@@ -20,14 +20,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.tableView.isScrollEnabled = true
-        //below line also necessary for making table scrollable
-        self.tableView.reloadData()
-    }
-    
     @IBAction func onBackClick(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: {});
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
