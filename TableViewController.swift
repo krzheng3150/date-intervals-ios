@@ -13,6 +13,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     var results: [String] = []
+    var isZeroIndexed: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if tableView == self.tableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
             let row = indexPath.row
-            cell.textLabel?.text = String(row+1) + ": " + results[row]
+            cell.textLabel?.text = String(isZeroIndexed ? row : row+1) + ": " + results[row]
             return cell
         }
         

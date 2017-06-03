@@ -12,6 +12,8 @@ class ResultsViewController: UIViewController {
     
     //MARK: Outlets
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var zeroIndexLabel: UILabel!
+    @IBOutlet weak var zeroIndexSwitch: UISwitch!
     
     var numIntervals: Int = 10
     var startDate: Date = Date()
@@ -28,6 +30,7 @@ class ResultsViewController: UIViewController {
         statusLabel.textAlignment = NSTextAlignment.center;
         statusLabel.font = statusLabel.font.withSize(48)
         statusLabel.text = "Status: Calculating..."
+        zeroIndexLabel.textAlignment = NSTextAlignment.center;
         
         let startTime = startDate.timeIntervalSince1970
         let endTime = endDate.timeIntervalSince1970
@@ -49,6 +52,7 @@ class ResultsViewController: UIViewController {
         else {
             let tableController: TableViewController = self.storyboard?.instantiateViewController(withIdentifier: "table") as! TableViewController
             tableController.results = results
+            tableController.isZeroIndexed = zeroIndexSwitch.isOn
             self.present(tableController, animated: true, completion: nil)
         }
     }
@@ -80,7 +84,7 @@ class ResultsViewController: UIViewController {
     func generateCsvString() -> String {
         var fileStr = ""
         for i in 0...results.count-1 {
-            fileStr.append(String(i+1) + "," + results[i] + "\n")
+            fileStr.append(String(zeroIndexSwitch.isOn ? i : i+1) + "," + results[i] + "\n")
         }
         return fileStr
     }

@@ -103,7 +103,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4w-kF-Gb4">
-                                <rect key="frame" x="124" y="487" width="127" height="30"/>
+                                <rect key="frame" x="124" y="497" width="127" height="30"/>
                                 <state key="normal" title="Send Email"/>
                                 <connections>
                                     <action selector="onSendEmail:" destination="PPR-Cu-Y85" eventType="touchUpInside" id="xwB-FQ-373"/>
@@ -118,34 +118,50 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaD-Ba-g70">
-                                <rect key="frame" x="124" y="387" width="127" height="30"/>
+                                <rect key="frame" x="124" y="407" width="127" height="30"/>
                                 <state key="normal" title="Download File"/>
                                 <connections>
                                     <action selector="onDownload:" destination="PPR-Cu-Y85" eventType="touchUpInside" id="vwZ-Wk-Q60"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JW-T0-ky1">
-                                <rect key="frame" x="124" y="287" width="127" height="30"/>
+                                <rect key="frame" x="124" y="317" width="127" height="30"/>
                                 <state key="normal" title="View Results"/>
                                 <connections>
                                     <action selector="onViewResults:" destination="PPR-Cu-Y85" eventType="touchUpInside" id="shs-F3-lko"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fIJ-Hc-GIl">
+                                <rect key="frame" x="162" y="226" width="53" height="31"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zero-index results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sG1-Lz-2xs">
+                                <rect key="frame" x="112" y="197" width="151" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sG1-Lz-2xs" firstAttribute="leading" secondItem="qab-80-Odv" secondAttribute="leadingMargin" constant="96" id="4fN-xH-HhC"/>
                             <constraint firstItem="3JW-T0-ky1" firstAttribute="leading" secondItem="qab-80-Odv" secondAttribute="leadingMargin" constant="108" id="6Ky-Lt-hfm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sG1-Lz-2xs" secondAttribute="trailing" constant="96" id="7RV-Ml-PH7"/>
+                            <constraint firstItem="fIJ-Hc-GIl" firstAttribute="top" secondItem="sG1-Lz-2xs" secondAttribute="bottom" constant="8" id="8IC-LB-F0c"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ubY-tx-eUb" secondAttribute="trailing" constant="22" id="Bl6-ao-u4R"/>
-                            <constraint firstItem="l4w-kF-Gb4" firstAttribute="top" secondItem="BaD-Ba-g70" secondAttribute="bottom" constant="70" id="CdV-fA-CTQ"/>
+                            <constraint firstItem="l4w-kF-Gb4" firstAttribute="top" secondItem="BaD-Ba-g70" secondAttribute="bottom" constant="60" id="CdV-fA-CTQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BaD-Ba-g70" secondAttribute="trailing" constant="108" id="FXK-6L-SoZ"/>
-                            <constraint firstItem="BaD-Ba-g70" firstAttribute="top" secondItem="3JW-T0-ky1" secondAttribute="bottom" constant="70" id="G9d-7j-7tA"/>
+                            <constraint firstItem="BaD-Ba-g70" firstAttribute="top" secondItem="3JW-T0-ky1" secondAttribute="bottom" constant="60" id="G9d-7j-7tA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3JW-T0-ky1" secondAttribute="trailing" constant="108" id="HIh-Ye-JZo"/>
                             <constraint firstItem="ubY-tx-eUb" firstAttribute="top" secondItem="ACN-6J-fLD" secondAttribute="bottom" constant="30" id="IUx-LE-PC8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="l4w-kF-Gb4" secondAttribute="trailing" constant="108" id="QJO-il-GPw"/>
                             <constraint firstItem="ubY-tx-eUb" firstAttribute="leading" secondItem="qab-80-Odv" secondAttribute="leadingMargin" constant="22" id="TP1-1w-fh5"/>
-                            <constraint firstItem="hJA-jP-DuB" firstAttribute="top" secondItem="l4w-kF-Gb4" secondAttribute="bottom" constant="70" id="YgP-SW-3eL"/>
+                            <constraint firstItem="hJA-jP-DuB" firstAttribute="top" secondItem="l4w-kF-Gb4" secondAttribute="bottom" constant="60" id="YgP-SW-3eL"/>
                             <constraint firstItem="9RF-xC-MuT" firstAttribute="top" secondItem="hJA-jP-DuB" secondAttribute="bottom" constant="50" id="ZBf-bb-JYI"/>
+                            <constraint firstItem="3JW-T0-ky1" firstAttribute="top" secondItem="fIJ-Hc-GIl" secondAttribute="bottom" constant="60" id="eXL-dT-f0J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hJA-jP-DuB" secondAttribute="trailing" constant="108" id="g5b-2O-RMX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fIJ-Hc-GIl" secondAttribute="trailing" constant="146" id="nhg-4f-sfN"/>
+                            <constraint firstItem="fIJ-Hc-GIl" firstAttribute="leading" secondItem="qab-80-Odv" secondAttribute="leadingMargin" constant="146" id="uNx-Ui-doq"/>
                             <constraint firstItem="l4w-kF-Gb4" firstAttribute="leading" secondItem="qab-80-Odv" secondAttribute="leadingMargin" constant="108" id="wer-Rc-ywS"/>
                             <constraint firstItem="hJA-jP-DuB" firstAttribute="leading" secondItem="qab-80-Odv" secondAttribute="leadingMargin" constant="108" id="xVQ-GX-F2a"/>
                             <constraint firstItem="BaD-Ba-g70" firstAttribute="leading" secondItem="qab-80-Odv" secondAttribute="leadingMargin" constant="108" id="ynS-7L-Ybu"/>
@@ -153,6 +169,8 @@
                     </view>
                     <connections>
                         <outlet property="statusLabel" destination="ubY-tx-eUb" id="Z9p-Xz-2qx"/>
+                        <outlet property="zeroIndexLabel" destination="sG1-Lz-2xs" id="tiq-tO-eUI"/>
+                        <outlet property="zeroIndexSwitch" destination="fIJ-Hc-GIl" id="qVe-pM-kcL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foz-qv-SVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
