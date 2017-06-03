@@ -7,8 +7,9 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
-class ResultsViewController: UIViewController {
+class ResultsViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     //MARK: Outlets
     @IBOutlet weak var statusLabel: UILabel!
@@ -58,23 +59,56 @@ class ResultsViewController: UIViewController {
     }
     
     @IBAction func onDownload(_ sender: UIButton) {
-        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         let filename = generateFileName()
-        let contents = generateCsvString()
-        do {
-            try contents.write(toFile: path + filename, atomically: true, encoding: .utf8)
+        let downloadError = saveFile(path: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + filename)
+        if downloadError == nil {
             alert(title: "Download Success", message: "Successfully downloaded to your Documents folder as " + filename)
         }
-        catch {
-            alert(title: "Download Failed", message: "\(error)")
+        else {
+            alert(title: "Download Failed", message: downloadError!)
         }
     }
     
     @IBAction func onSendEmail(_ sender: UIButton) {
+        //Check to see the device can send email.
+        if( MFMailComposeViewController.canSendMail() ) {
+            
+            let mailComposer = MFMailComposeViewController()
+            mailComposer.mailComposeDelegate = self
+
+            mailComposer.setSubject("DateIntervals App Data")
+            mailComposer.setMessageBody("See attachment.", isHTML: false)
+            
+            let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
+            let filename = generateFileName()
+            let fullpath = path + filename
+            let saveError = saveFile(path: path + filename)
+            if (saveError != nil) {
+                alert(title: "Unable to save file; cannot send email.", message: saveError!)
+                return
+            }
+            let fileData = NSData(contentsOfFile: fullpath)
+            mailComposer.addAttachmentData(fileData! as Data, mimeType: "text/csv", fileName: filename)
+            self.present(mailComposer, animated: true, completion: nil)
+        }
+        else {
+            alert(title: "Mail Error", message: "Unfortunately, this device is not set up properly to send email.")
+        }
     }
     
     @IBAction func onBackClick(_ sender: UIButton) {
         self.dismiss(animated: true, completion: {});
+    }
+    
+    func saveFile(path: String) -> String? {
+        let contents = generateCsvString()
+        do {
+            try contents.write(toFile: path, atomically: true, encoding: .utf8)
+            return nil
+        }
+        catch {
+            return "\(error)"
+        }
     }
     
     func generateFileName() -> String {
