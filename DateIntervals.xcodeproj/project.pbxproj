@@ -203,6 +203,7 @@
 				TargetAttributes = {
 					6C9650271EDDE2B40001D320 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 999UUV63PS;
 						ProvisioningStyle = Automatic;
 					};
 					6C96503B1EDDE2B50001D320 = {
@@ -428,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 999UUV63PS;
 				INFOPLIST_FILE = DateIntervals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unnamedgreencompany.DateIntervals;
@@ -440,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 999UUV63PS;
 				INFOPLIST_FILE = DateIntervals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unnamedgreencompany.DateIntervals;

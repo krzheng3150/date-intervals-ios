@@ -28,7 +28,7 @@ class ResultsViewController: UIViewController, MFMailComposeViewControllerDelega
         
         fileTitleDateFormatter.dateFormat = "yyyyMMddHHmmss"
         
-        statusLabel.font = statusLabel.font.withSize(48)
+        statusLabel.font = statusLabel.font.withSize(32)
         statusLabel.text = "Status: Calculating..."
         
         let startTime = startDate.timeIntervalSince1970
@@ -58,7 +58,7 @@ class ResultsViewController: UIViewController, MFMailComposeViewControllerDelega
     
     @IBAction func onDownload(_ sender: UIButton) {
         let filename = generateFileName()
-        let downloadError = saveFile(path: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + filename)
+        let downloadError = saveFile(path: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/" + filename)
         if downloadError == nil {
             alert(title: "Download Success", message: "Successfully downloaded to your Documents folder as " + filename)
         }
@@ -79,8 +79,8 @@ class ResultsViewController: UIViewController, MFMailComposeViewControllerDelega
             
             let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
             let filename = generateFileName()
-            let fullpath = path + filename
-            let saveError = saveFile(path: path + filename)
+            let fullpath = path + "/" + filename
+            let saveError = saveFile(path: fullpath)
             if (saveError != nil) {
                 alert(title: "Unable to save file; cannot send email.", message: saveError!)
                 return
