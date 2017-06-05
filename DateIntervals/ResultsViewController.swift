@@ -94,6 +94,10 @@ class ResultsViewController: UIViewController, MFMailComposeViewControllerDelega
         }
     }
     
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func onBackClick(_ sender: UIButton) {
         self.dismiss(animated: true, completion: {});
     }
