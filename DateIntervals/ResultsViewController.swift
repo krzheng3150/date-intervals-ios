@@ -28,10 +28,8 @@ class ResultsViewController: UIViewController, MFMailComposeViewControllerDelega
         
         fileTitleDateFormatter.dateFormat = "yyyyMMddHHmmss"
         
-        statusLabel.textAlignment = NSTextAlignment.center;
         statusLabel.font = statusLabel.font.withSize(48)
         statusLabel.text = "Status: Calculating..."
-        zeroIndexLabel.textAlignment = NSTextAlignment.center;
         
         let startTime = startDate.timeIntervalSince1970
         let endTime = endDate.timeIntervalSince1970
