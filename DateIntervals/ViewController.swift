@@ -89,6 +89,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UITextFieldDelegat
         endDateField.day = startDateField.day
         endDateField.hour = 0
         endDateField.minute = 0
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
