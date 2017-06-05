@@ -143,7 +143,7 @@ class SuperUIDatePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDat
     {
         switch component {
         case 0:
-            return CGFloat(self.bounds.width * 0.32)
+            return CGFloat(self.bounds.width * 0.28)
         case 1:
             return CGFloat(self.bounds.width * 0.17)
         case 2:
